@@ -1,0 +1,63 @@
+<div class="min-h-screen bg-white pt-24 px-4 pb-20">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-16 text-center">
+      <h1 class="text-6xl md:text-7xl font-black text-black mb-6 tracking-tighter uppercase">
+        Acordes
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Aprende a tocar las composiciones de Shemá. Aquí encuentras todos los acordes organizados por canción.
+      </p>
+    </div>
+    
+    <!-- Acordes List -->
+    <div class="space-y-6 mb-16">
+      <div 
+        *ngFor="let item of accordions; let i = index"
+        class="group border-l-8 border-black hover:border-gray-400 transition-colors duration-300"
+      >
+        <!-- Header -->
+        <button
+          (click)="toggleAccordion(i)"
+          class="w-full px-8 py-6 bg-gradient-to-r from-black to-gray-900 text-white font-black uppercase tracking-wider flex justify-between items-center hover:from-gray-900 hover:to-black transition-all duration-300"
+        >
+          <span class="text-xl">{{ item.title }}</span>
+          <svg 
+            class="w-8 h-8 transition-transform duration-300"
+            [class.rotate-180]="expandedIndex === i"
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </button>
+
+        <!-- Content -->
+        <div 
+          *ngIf="expandedIndex === i"
+          class="px-8 py-8 bg-gradient-to-b from-gray-50 to-white border-b-8 border-black animate-slideDown"
+        >
+          <pre class="font-mono text-sm text-gray-800 leading-relaxed overflow-x-auto">{{ item.content }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-out;
+  }
+</style>
