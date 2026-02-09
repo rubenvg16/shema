@@ -11,27 +11,27 @@ import { CommonModule } from '@angular/common';
 export class ConciertosComponent {
   conciertos = [
     {
-      fecha: '22 de Febrero, 2026',
-      hora: '20:00',
-      lugar: 'Playa Club',
-      ciudad: 'Cancún, Quintana Roo',
-      descripcion: 'Concierto especial a la orilla del mar',
+      fecha: '11 de abril, 2026',
+      hora: '',
+      lugar: 'Gaudium Fest',
+      ciudad: 'Canarias',
+      descripcion: 'Festival de la resurreciíon',
       disponible: true
     },
     {
-      fecha: '15 de Marzo, 2026',
-      hora: '19:30',
-      lugar: 'Teatro Metropolitano',
-      ciudad: 'Ciudad de México',
-      descripcion: 'Presentación acústica y minimalista',
+      fecha: '14 de Marzo, 2026',
+      hora: '',
+      lugar: 'Vivo, ¿Para Quién?',
+      ciudad: 'Salamanca',
+      descripcion: 'Congreso Diocesano de las Vocaciones',
       disponible: true
     },
     {
-      fecha: '10 de Abril, 2026',
-      hora: '21:00',
-      lugar: 'Auditorio Nacional',
-      ciudad: 'Ciudad de México',
-      descripcion: 'Gran concierto de primavera',
+      fecha: '23 de Mayo, 2026',
+      hora: '',
+      lugar: 'Concierto Oración',
+      ciudad: 'Valencia',
+      descripcion: '',
       disponible: true
     },
     {
