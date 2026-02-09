@@ -3,7 +3,7 @@
 .acordes-content {
   font-family: 'Inter', 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.8;
   color: #1f2937;
   white-space: pre-wrap;
@@ -15,6 +15,14 @@
   font-weight: 900;
   color: #000000;
   letter-spacing: 0.5px;
+}
+
+/* Responsive design para móvil */
+@media (max-width: 640px) {
+  .acordes-content {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
 }
 
 /* Animaciones para los botones */
@@ -56,6 +64,16 @@
   text-transform: uppercase;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .music-button {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+  }
 }
 
 .music-button::before {
@@ -81,6 +99,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 640px) {
+  .music-button:hover {
+    transform: translateY(-1px) scale(1.04);
+  }
+}
+
 .spotify-btn {
   background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
 }
@@ -103,6 +127,12 @@
 
 .music-button:hover .icon-animation {
   transform: scale(1.2) rotate(5deg);
+}
+
+@media (max-width: 640px) {
+  .music-button:hover .icon-animation {
+    transform: scale(1.1) rotate(3deg);
+  }
 }
 
 
